@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENKEU PORTALDATA</title>
+    <style>
+        /* Reset margin dan padding bawaan browser */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0f172a; /* Warna latar gelap agar transisi mulus */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Container pembungkus agar terkunci di GitHub */
+        .iframe-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 9999;
+        }
+
+        /* Mengatur Iframe agar responsif dan fullscreen */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="iframe-container">
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbw2RE-W-iJDmHVEgjIQLhNDzcK-lJU6i8T_UQdBX3UjBkcGcEnCIU9LZKH6YneNRj-q9w/exec" 
+            id="Renkeu-frame"
+            name="Renkeu-frame"
+            allow="camera; geolocation; microphone; clipboard-write; javascript"
+            title="RENKEU PORTALDATA">
+        </iframe>
+    </div>
+
+    <script>
+        console.log("RENKEU-PORTALDATA");
+    </script>
+</body>
+</html>
