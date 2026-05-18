@@ -12,7 +12,10 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: #0f172a; /* Warna latar gelap sesuai tema portal */
+            
+            /* MENGGUNAKAN WARNA ASLI BACKGROUND PORTAL ANDA */
+            background-color: #0b0f19 !important; 
+            
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
@@ -24,12 +27,15 @@
             right: 0;
             width: 100%;
             
-            /* MEMBERIKAN JARAK PADA BAGIAN ATAS */
-            top: 25px; /* <--- Ubah angka ini (misal 10px, 15px, atau 20px) sesuai selera Anda */
-            height: calc(100% - 25px); /* Menyesuaikan tinggi agar sisa layar tetap pas */
+            /* MEMBERIKAN JARAK ATAS */
+            top: 25px; /* Anda bisa ubah ke 10px atau 12px jika dirasa terlalu renggang */
+            height: calc(100% - 25px); 
             
             border: none;
             z-index: 9999;
+            
+            /* Memastikan latar belakang container juga mengikuti warna pekat */
+            background-color: #0b0f19 !important;
         }
 
         /* Mengatur Iframe agar penuh di dalam container */
@@ -38,6 +44,7 @@
             height: 100%;
             border: none;
             display: block;
+            background-color: transparent; /* Membuat iframe transparan agar background menyatu */
         }
     </style>
 </head>
@@ -45,16 +52,16 @@
 
     <div class="iframe-container">
         <iframe 
-            src="https://script.google.com/macros/s/AKfycby8Ob8yUwsfH-hynUoHIl7ZTi-YV04jp2HV7-gQvI2iXv5skOo21gQsoLQFLcYNIzZ_kw/exec" 
-            id="Renkeu-frame"
-            name="Renkeu-frame"
+            src="https://script.google.com/macros/s/AKfycbxiSvvz4xwnJzh4WVgyZu3OthGzaf2uZJ0ayKY6Y39RMd-QKz7Ltgw_MMtI3soYNlNAkg/exec" 
+            id="renkeu-frame"
+            name="renkeu-frame"
             allow="camera; geolocation; microphone; clipboard-write; javascript"
-            title="RENKEU PORTALDATA">
+            title="RENKEU_PORTALDATA">
         </iframe>
     </div>
 
     <script>
-        console.log("MANAJEMEN DATA");
+        console.log("Wrapper GitHub dengan penyelarasan warna latar belakang sukses diterapkan.");
     </script>
 </body>
 </html>
