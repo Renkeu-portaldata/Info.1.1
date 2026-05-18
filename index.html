@@ -4,22 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RENKEU PORTALDATA</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
-        /* Reset default margin & padding */
+        /* Reset default browser margin & padding */
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            
-            /* MENGGUNAKAN WARNA ASLI BACKGROUND PORTAL ANDA */
-            background-color: #0b0f19 !important; 
-            
+            background-color: #0b0f19; /* Warna latar gelap pekat asli tema Anda */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
-        /* Container pembungkus utama */
+        /* 1. PENATAAN GAYA KODE HEADER BARU */
+        .app-header {
+            height: 45px;
+            background-color: #0f172a; /* Warna bar sedikit lebih terang dari background utama */
+            border-bottom: 1px solid #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        /* Bagian Brand (Kiri) */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #38bdf8; /* Warna biru muda aksen cerah */
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .brand i {
+            font-size: 16px;
+        }
+
+        /* Bagian Status Badge (Kanan) */
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #1e293b;
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: #94a3b8;
+            font-size: 11px;
+            border: 1px solid #334155;
+        }
+        
+        /* Titik berkedip hijau menandakan koneksi aktif */
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #10b981; /* Warna hijau sukses */
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        /* 2. CONTAINER UNTUK IFRAME APPS SCRIPT */
         .iframe-container {
             position: absolute;
             left: 0;
@@ -27,41 +75,56 @@
             right: 0;
             width: 100%;
             
-            /* MEMBERIKAN JARAK ATAS */
-            top: 25px; /* Anda bisa ubah ke 10px atau 12px jika dirasa terlalu renggang */
-            height: calc(100% - 25px); 
+            /* Ditempatkan tepat di bawah tinggi header (45px) */
+            top: 45px; 
+            height: calc(100% - 45px); 
             
             border: none;
             z-index: 9999;
-            
-            /* Memastikan latar belakang container juga mengikuti warna pekat */
-            background-color: #0b0f19 !important;
+            background-color: #0b0f19;
         }
 
-        /* Mengatur Iframe agar penuh di dalam container */
+        /* Mengatur Iframe */
         iframe {
             width: 100%;
             height: 100%;
             border: none;
             display: block;
-            background-color: transparent; /* Membuat iframe transparan agar background menyatu */
+            background-color: transparent;
+        }
+
+        /* Animasi berkedip untuk status dot */
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
     </style>
 </head>
 <body>
 
-    <div class="iframe-container">
-        <iframe 
-            src="https://script.google.com/macros/s/AKfycbxiSvvz4xwnJzh4WVgyZu3OthGzaf2uZJ0ayKY6Y39RMd-QKz7Ltgw_MMtI3soYNlNAkg/exec" 
-            id="renkeu-frame"
-            name="renkeu-frame"
-            allow="camera; geolocation; microphone; clipboard-write; javascript"
-            title="RENKEU_PORTALDATA">
-        </iframe>
+  <header class="app-header">
+    <div class="brand">
+      <i class="bi bi-shield-check"></i>
+      <span>MANAJEMEN DATA RENKEU</span>
     </div>
+    <div class="status-badge">
+      <div class="status-dot"></div> Secure Google Cloud Connection
+    </div>
+  </header>
 
-    <script>
-        console.log("Wrapper GitHub dengan penyelarasan warna latar belakang sukses diterapkan.");
-    </script>
+  <div class="iframe-container">
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbxiSvvz4xwnJzh4WVgyZu3OthGzaf2uZJ0ayKY6Y39RMd-QKz7Ltgw_MMtI3soYNlNAkg/execc" 
+        id="Renkeu-frame"
+        name="Reneku-frame"
+        allow="camera; geolocation; microphone; clipboard-write; javascript"
+        title="Renkeu-Portaldata">
+    </iframe>
+  </div>
+
+  <script>
+      console.log("Wrapper GitHub untuk Renkeu Portal Data berhasil dimuat.");
+  </script>
 </body>
 </html>
